@@ -16,7 +16,7 @@ var app = express();
 
 //db setup
 var db = mysql.createConnection(dbconfig);
-//db.connect();
+db.connect();
 
 app.set('db',db);
 
@@ -64,9 +64,9 @@ var matrix =
         ['S','D','E','E','L','N'],
         ['T','E','A','N','E','E']
     ];
-var words = require('./lib/examiner')(db,matrix);
+//var words = require('./lib/examiner')(db,matrix);
 
-
+require('./lib/examiner/index_newDB')(db);
 
 
 module.exports = app;

@@ -55,6 +55,30 @@ describe('Examiner', function() {
 
     });
 
+    describe('searchForWordStarting',function()
+    {
+        it('should find words', function(done)
+        {
+            var mysql = require('mysql');
+            var dbconfig = require('../config/db');
+            var db = mysql.createConnection(dbconfig);
+            db.connect();
+
+            var word = "tz";
+            var query = require('../lib/examiner/searchForWordStarting');
+            query(
+                db,
+                word,
+                function(error,result)
+                {
+                    console.log(result);
+                    done();
+                }
+            );
+        });
+
+    });
+
     describe('searchForWordRedis',function()
     {
         it('should find 1 word', function(done)

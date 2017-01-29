@@ -19,7 +19,7 @@ router.get('/', function(req, res, next)
 
     var words = require('../lib/examiner')(db,matrix);
 
-    console.log(words);
+    //console.log(words);
 
     res.render('index', { title: 'Express' });
 });

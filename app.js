@@ -64,6 +64,7 @@ var matrix =
         ['S','D','E','E','L','N'],
         ['T','E','A','N','E','E']
     ];
+
 var words = require('./lib/examiner')(db,matrix);
 
 console.log(words);

@@ -61,7 +61,7 @@ file = path.join(__dirname, './data', 'words.txt');
 
 require('./lib/examiner/createJsonDB')(file,function(err,result)
 {
-    var file = path.join(__dirname, './data', 'result.txt');
+    var file = path.join(__dirname, './data', 'words.js');
     console.log("hi");
     fs.appendFileSync(file,JSON.stringify(result));
 });

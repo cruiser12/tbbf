@@ -136,4 +136,20 @@ describe('Examiner', function() {
         });
     })
 
+    describe('searchForWordLocally',function()
+    {
+        it('should return a file', function(done)
+        {
+
+            path = require('path');
+            db = require('../config/words');
+
+            require('../lib/examiner/searchForWordLocally')(db,word,function(err,result)
+            {
+                console.log(result);
+                done();
+            });
+        });
+    })
+
 });

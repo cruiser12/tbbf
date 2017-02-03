@@ -79,7 +79,7 @@ $(function()
         $("table.matrix input").keydown(
             function(e)
             {
-                event.preventDefault();
+                e.preventDefault();
                 var key = e.which;
                 if (key == 8)
                 {
@@ -91,10 +91,11 @@ $(function()
                 else if (key != 9)
                 {
                     var next = $(this).parent().next().find('input').first();
-                    console.log(next);
+                    console.log(key);
                     if (next.length==0) next = $(this).parent().parent().next().find('input').first();
                     next.focus();
-                    $(this).val(String.fromCharCode(key));
+                    if (key == 189 ) $(this).val("-");
+                    else $(this).val(String.fromCharCode(key));
                 }
             }
         );

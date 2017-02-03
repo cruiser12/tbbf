@@ -120,4 +120,20 @@ describe('Examiner', function() {
 
     })
 
+    describe('createJsonDB',function()
+    {
+        it('should read the file', function(done)
+        {
+
+            path = require('path');
+            file = path.join(__dirname, './fixtures', 'words.txt');
+
+            require('../lib/examiner/createJsonDB')(file,function(err,result)
+            {
+                console.log(result);
+                done();
+            });
+        });
+    })
+
 });

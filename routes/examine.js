@@ -8,15 +8,11 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
 
-    var db = req.app.get('db');
-
     var matrix = JSON.parse(req.body.matrix);
 
-    var words = require('../lib/examiner')(db,matrix,function(err,result)
-    {
-        res.send({"words" : result});
-    });
+    var words = require('../lib/examiner')(matrix);
 
+    res.send({"words" : words});
 
 });
 

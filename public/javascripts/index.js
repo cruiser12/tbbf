@@ -5,7 +5,6 @@ $(function()
 
         var buildRow = function(table)
         {
-            console.log(table);
             var row = $("<tr></tr>");
             row.appendTo(table);
 
@@ -57,7 +56,6 @@ $(function()
     }
     var fillMatrix = function(matrix)
     {
-        console.log(matrix);
         var i=0;
         var j=0;
         y = matrix.length;
@@ -76,6 +74,7 @@ $(function()
     }
     var setEventsForMatrix = function()
     {
+        /*
         $("table.matrix input").keydown(
             function(e)
             {
@@ -99,6 +98,30 @@ $(function()
                 }
             }
         );
+        */
+
+         $("table.matrix input").keyup(
+         function(e)
+         {
+         var key = e.which;
+         if (key == 8)
+         {
+         var prev = $(this).parent().prev().find('input').first();
+         if (prev.length == 0) prev = $(this).parent().parent().prev().find('input').last();
+         prev.focus();
+         $(this).val("");
+         prev.val("");
+         }
+         else if (key != 9)
+         {
+         var next = $(this).parent().next().find('input').first();
+         if (next.length==0) next = $(this).parent().parent().next().find('input').first();
+         next.focus();
+         }
+         }
+         );
+
+
         $("button.matrix").click(
             function()
             {
@@ -125,42 +148,33 @@ $(function()
     }
     var sendMatrixForExamination = function(matrix)
     {
-        var onSuccess = function(response)
-        {
-            response.words.forEach(
+        examiner
+            .run(matrix)
+            .forEach(
                 function(word)
                 {
                     var word = $("<li>" + word.word + "<span>" + word.path + "</span></li>");
                     word.appendTo($("div.words ul"))
                 }
             );
-            $(".words li").click(
-                function()
-                {
-                    $(".words li").css("background-color","white");
-                    $("table.matrix input").css("background-color","white");
-                    $(this).css("background-color","yellow");
-                    var path = JSON.parse($(this).find('span').text());
-                    path.forEach(
-                        function(step)
-                        {
-                            $('#'+step[0]+'x'+step[1]).css("background-color","yellow");
-                        }
-                    )
-                }
-            );
-        };
 
-        $.ajax(
+        $(".words li").click(
+            function()
             {
-                type        : "POST",
-                url         : "/examine",
-                data        : { "matrix" : JSON.stringify(matrix) },
-                success     : onSuccess,
-                dataType    : 'json'
+                $(".words li").css("background-color","white");
+                $("table.matrix input").css("background-color","white");
+                $(this).css("background-color","yellow");
+                var path = JSON.parse($(this).find('span').text());
+                path.forEach(
+                    function(step)
+                    {
+                        $('#'+step[0]+'x'+step[1]).css("background-color","yellow");
+                    }
+                )
             }
         );
-    }
+    };
+
 
     var test =
         [

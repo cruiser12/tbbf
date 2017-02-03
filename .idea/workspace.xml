@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0699db9e-56cb-4e50-bc86-4676c249076f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/words.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/twobirds.iml" afterPath="$PROJECT_DIR$/.idea/twobirds.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/examiner/createJsonDB.js" afterPath="$PROJECT_DIR$/lib/examiner/createJsonDB.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/examiner/index.js" afterPath="$PROJECT_DIR$/lib/examiner/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/examiner/searchForWordLocally.js" afterPath="$PROJECT_DIR$/lib/examiner/searchForWordLocally.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/examiner.js" afterPath="$PROJECT_DIR$/test/examiner.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/words.txt" afterPath="$PROJECT_DIR$/test/fixtures/words.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -549,7 +541,7 @@
       <workItem from="1486136914192" duration="1945000" />
       <workItem from="1486141738456" duration="153000" />
       <workItem from="1486142148847" duration="637000" />
-      <workItem from="1486142938759" duration="848000" />
+      <workItem from="1486142938759" duration="877000" />
     </task>
     <task id="LOCAL-00001" summary="preask DB with sql: like ...%">
       <created>1485730136986</created>
@@ -600,7 +592,14 @@
       <option name="project" value="LOCAL" />
       <updated>1486114502891</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="new local DB - working">
+      <created>1486143901063</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1486143901063</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -636,7 +635,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93299000" />
+    <option name="totallyTimeSpent" value="93328000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1577" y="76" width="1859" height="941" extended-state="0" />
@@ -695,7 +694,8 @@
     <MESSAGE value="zoix" />
     <MESSAGE value="loadDB" />
     <MESSAGE value="new local DB" />
-    <option name="LAST_COMMIT_MESSAGE" value="new local DB" />
+    <MESSAGE value="new local DB - working" />
+    <option name="LAST_COMMIT_MESSAGE" value="new local DB - working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

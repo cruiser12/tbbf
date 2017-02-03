@@ -54,18 +54,18 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-
+/*
 path = require('path');
 fs = require('fs');
 file = path.join(__dirname, './data', 'words.txt');
 
 require('./lib/examiner/createJsonDB')(file,function(err,result)
 {
-    var file = path.join(__dirname, './data', 'words.js');
+    var file = path.join(__dirname, './data', 'words2.js');
     console.log("hi");
     fs.appendFileSync(file,JSON.stringify(result));
 });
-
+*/
 
 
 module.exports = app;

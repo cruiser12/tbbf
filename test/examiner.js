@@ -138,17 +138,15 @@ describe('Examiner', function() {
 
     describe('searchForWordLocally',function()
     {
-        it('should return a file', function(done)
+        it('should return hit false or like', function(done)
         {
 
             path = require('path');
             db = require('../config/words');
+            word = "GEHEN";
 
-            require('../lib/examiner/searchForWordLocally')(db,word,function(err,result)
-            {
-                console.log(result);
-                done();
-            });
+            found = require('../lib/examiner/searchForWordLocally')(db,word);
+            console.log(found);
         });
     })
 
